@@ -1,0 +1,8 @@
+{
+  "name": "before-it-melts-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node tools/prepare-site.mjs" },
+  "engines": { "node": ">=20" }
+}
