@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "build": "node tools/prepare-site.mjs && node tools/verify-site.mjs", "verify": "node tools/verify-site.mjs" },
+  "scripts": { "build": "node tools/prepare-site.mjs && node tools/verify-site.mjs", "verify": "node tools/verify-site.mjs", "start": "node tools/serve-site.mjs" },
   "engines": { "node": ">=20" }
 }
