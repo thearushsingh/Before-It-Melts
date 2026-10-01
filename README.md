@@ -2,7 +2,7 @@
 
 ### A gift for my busy dad
 
-Hi, I'm Arush, the developer behind **The Skull Bear Studios**. I made Before It Melts, a 3D scooter adventure about a kid named Ari who wants to do something nice for his dad.
+Hi, I'm Arush founder of The Skull Bear Studios , a future org founded by me and the developer behind **Before it melts game**.  a 3D scooter adventure about a kid named Ari who wants to do something nice for his dad.
 
 Dad is busy working on a Sunday, so Ari comes up with a plan: bring him his favourite ice cream. Your job is to help Ari collect it and get home. The trip takes you through city traffic, a forest and a village full of skeletons.
 
