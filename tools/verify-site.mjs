@@ -34,6 +34,7 @@ function walk(dir) {
 const files = walk(dist);
 const total = files.reduce((sum, f) => sum + f.bytes, 0);
 const largest = files.reduce((a, b) => a.bytes > b.bytes ? a : b);
-if (files.length > 1000 || total > 500000000 || largest.bytes > 200000000 || files.some(f => f.path.length > 240))
+// itch.io's extracted archive limit is 500 MiB (524288000 bytes).
+if (files.length > 1000 || total > 500 * 1024 * 1024 || largest.bytes > 200000000 || files.some(f => f.path.length > 240))
   throw Error('itch.io archive limits exceeded');
 console.log(JSON.stringify({ originalDataIdentical: true, otherReleaseFilesVerified: release.files.length - 1, files: files.length, totalBytes: total, largestFile: largest }, null, 2));

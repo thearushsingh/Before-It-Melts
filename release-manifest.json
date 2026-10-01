@@ -1,12 +1,12 @@
 {
   "game": "Before It Melts",
   "unity": "6000.5.6f1",
-  "created": "2026-10-01T03:02:53.468Z",
+  "created": "2026-10-01T14:58:13.517Z",
   "splitFiles": [
     {
       "path": "Build/web-release.data.unityweb",
-      "bytes": 372308081,
-      "sha256": "d80caea2fd404bfbf90e763bf92a0f2b21758b4b496bf6ff90b95d06180237c8",
+      "bytes": 412094366,
+      "sha256": "bd558e99407f84e3822a27c4390d6fb1ba7bd5f2310a352e7ca1df36511d8709",
       "parts": [
         "asset-parts/Build__web-release.data.unityweb.part000",
         "asset-parts/Build__web-release.data.unityweb.part001",
@@ -15,7 +15,8 @@
         "asset-parts/Build__web-release.data.unityweb.part004",
         "asset-parts/Build__web-release.data.unityweb.part005",
         "asset-parts/Build__web-release.data.unityweb.part006",
-        "asset-parts/Build__web-release.data.unityweb.part007"
+        "asset-parts/Build__web-release.data.unityweb.part007",
+        "asset-parts/Build__web-release.data.unityweb.part008"
       ]
     },
     {
@@ -31,23 +32,28 @@
   "files": [
     {
       "path": "Build/web-release.data.unityweb",
-      "bytes": 372308081,
-      "sha256": "d80caea2fd404bfbf90e763bf92a0f2b21758b4b496bf6ff90b95d06180237c8"
+      "bytes": 412094366,
+      "sha256": "bd558e99407f84e3822a27c4390d6fb1ba7bd5f2310a352e7ca1df36511d8709"
     },
     {
       "path": "Build/web-release.framework.js.unityweb",
       "bytes": 77501,
-      "sha256": "a6ecb8639ab8027e32dd5cebea8946b410a0c84c6aab91b7657c4956a3dfd387"
+      "sha256": "e66f073fb7b4ec283148dcd1d96995969fe6b40e11fa71ad2cbdca3fcbdc8c9d"
     },
     {
       "path": "Build/web-release.loader.js",
       "bytes": 48106,
-      "sha256": "7a00b2f027e28f0511766a3227c04f899b6188b422ce7185e18569701f1ce15c"
+      "sha256": "0fca0f52f757fbe98afc1158ba59bd9c30824c848b9019f7129cd5409c3facb4"
     },
     {
       "path": "Build/web-release.wasm.unityweb",
-      "bytes": 9705659,
-      "sha256": "6b33f32001df292180faf0e205f15c085925478fc34c55ebaefedea207c3a7c3"
+      "bytes": 9706402,
+      "sha256": "a9bed5626104fcd2841df7b8903c54535d60dfffb2086c0d87138f698428242f"
+    },
+    {
+      "path": "chunk-loader.js",
+      "bytes": 2424,
+      "sha256": "a36ff26c109311a047da95a3482b20013c8de6fd5a0dc95acd8920d63b8a5f25"
     },
     {
       "path": "index.html",
@@ -128,11 +134,6 @@
       "path": "TemplateData/webmemd-icon.png",
       "bytes": 1670,
       "sha256": "c56f5494640cedda273aad38d58e6ab9da625d5b3f4d875c0ff92c6192a569c2"
-    },
-    {
-      "path": "chunk-loader.js",
-      "bytes": 2424,
-      "sha256": "a36ff26c109311a047da95a3482b20013c8de6fd5a0dc95acd8920d63b8a5f25"
     }
   ]
 }
