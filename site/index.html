@@ -34,6 +34,7 @@
         <div id="unity-build-title">Before It Melts</div>
       </div>
     </div>
+    <script src="chunk-loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
@@ -123,18 +124,39 @@
 
       var script = document.createElement("script");
       script.src = loaderUrl;
-      script.onload = () => {
+      script.onload = async () => {
+        var download;
+        var status = document.createElement('div');
+        status.style.cssText = 'text-align:center;color:#fff;font:14px Arial;margin-top:12px';
+        status.setAttribute('role', 'status');
+        document.querySelector('#unity-loading-bar').appendChild(status);
+        try {
+        status.textContent = 'Downloading your adventure… 0%';
+        download = await prepareGameData('Build/game-data.json', progress => {
+          document.querySelector('#unity-progress-bar-full').style.width = (progress * 80) + '%';
+          status.textContent = 'Downloading your adventure… ' + Math.round(progress * 100) + '%';
+        });
+        config.dataUrl = download.url;
+        config.cacheControl = url => url.startsWith('blob:') ? 'no-store' : 'must-revalidate';
+        status.textContent = 'Starting Before It Melts…';
         createUnityInstance(canvas, config, (progress) => {
-          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+          document.querySelector("#unity-progress-bar-full").style.width = (80 + 20 * progress) + "%";
               }).then((unityInstance) => {
+                download.release();
                 document.querySelector("#unity-loading-bar").style.display = "none";
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
 
               }).catch((message) => {
+                download.release();
                 unityShowBanner("The game could not load. Please refresh or try a desktop browser. " + message, "error");
               });
+        } catch (error) {
+          if (download) download.release();
+          status.textContent = 'Download interrupted. Please refresh to try again.';
+          unityShowBanner(error.message, 'error');
+        }
             };
 
       document.body.appendChild(script);

@@ -51,8 +51,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 6576,
-      "sha256": "3ea83451bd227e80a00cfaa181ffc51f17a14cf669f728cfae1cef2e5860a7ad"
+      "bytes": 7772,
+      "sha256": "a3185c0b729c4816e2dd19f15427afdde502279aea3f19082c48a8bac73c3912"
     },
     {
       "path": "StreamingAssets/AriEnding.mp4",
@@ -128,6 +128,11 @@
       "path": "TemplateData/webmemd-icon.png",
       "bytes": 1670,
       "sha256": "c56f5494640cedda273aad38d58e6ab9da625d5b3f4d875c0ff92c6192a569c2"
+    },
+    {
+      "path": "chunk-loader.js",
+      "bytes": 2424,
+      "sha256": "a36ff26c109311a047da95a3482b20013c8de6fd5a0dc95acd8920d63b8a5f25"
     }
   ]
 }

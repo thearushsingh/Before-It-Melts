@@ -11,6 +11,14 @@ The browser release of Ari's scooter adventure: collect ice creams, cross the fo
 
 The Unity game is already compiled. Netlify only assembles the static release; no Unity licence or Unity installation is needed there. The build includes both cutscenes and their audio.
 
+## Deploy on itch.io
+
+Run `npm run build`, then ZIP the **contents** of `dist/` so `index.html` is at the archive root. Choose **HTML** on itch.io and mark the uploaded ZIP as playable in the browser. Use click-to-launch fullscreen for the desktop game.
+
+The 372 MB Unity data asset is transported in 45 verified pieces of at most 8 MiB each. The browser reassembles the exact original compressed bytes and passes them to Unity's existing decompression loader. A short prefix prevents hosting services from mistaking partial pieces for complete gzip files. Every piece is checked with SHA-256 and failed downloads are retried up to twice. The complete package is approximately 479 MB; the largest individual file is the 83 MB opening cutscene. No game content, texture resolution, audio or video quality has been reduced. First download remains large, and desktop memory requirements are unchanged apart from startup assembly overhead.
+
+`npm run verify` checks original-data reconstruction, all other release checksums and itch.io archive limits. A local browser smoke test does not replace checking the final itch.io upload on its CDN.
+
 ## Play
 
 Click the game to focus it. W/S or Up/Down drive and reverse; A/D or Left/Right steer; Space brakes; Shift boosts. In the village, F or left click fires paintballs, and Shift + F uses the energy dome. The game explains the mission and controls before the ride.
