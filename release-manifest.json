@@ -1,7 +1,7 @@
 {
   "game": "Before It Melts",
   "unity": "6000.5.6f1",
-  "created": "2026-09-30T18:06:36.046Z",
+  "created": "2026-10-01T03:02:53.468Z",
   "splitFiles": [
     {
       "path": "Build/web-release.data.unityweb",
@@ -20,8 +20,8 @@
     },
     {
       "path": "StreamingAssets/PlayIntro.mp4",
-      "bytes": 82595020,
-      "sha256": "0f663b88a113f98e5abdf579679832e3dcaa162d29db9b259f3b1d0435b5b41a",
+      "bytes": 82564072,
+      "sha256": "18d7b7b6969c7ff848e6732bfe7617fd771f487ec18903062004d0c5334bd974",
       "parts": [
         "asset-parts/StreamingAssets__PlayIntro.mp4.part000",
         "asset-parts/StreamingAssets__PlayIntro.mp4.part001"
@@ -66,8 +66,8 @@
     },
     {
       "path": "StreamingAssets/PlayIntro.mp4",
-      "bytes": 82595020,
-      "sha256": "0f663b88a113f98e5abdf579679832e3dcaa162d29db9b259f3b1d0435b5b41a"
+      "bytes": 82564072,
+      "sha256": "18d7b7b6969c7ff848e6732bfe7617fd771f487ec18903062004d0c5334bd974"
     },
     {
       "path": "TemplateData/favicon.ico",
