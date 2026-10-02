@@ -23,7 +23,7 @@ I also worked on browser performance by batching city geometry and reducing repe
 
 ## What's in this repository?
 
-This repository contains the **compiled browser version** and the tools needed to prepare and host it. The full editable Unity project is **not included**.
+This repository contains the **compiled browser version** and the tools needed to prepare and play it locally. The full editable Unity project is **not included**.
 
 | File or folder | What's inside |
 | --- | --- |
@@ -32,7 +32,6 @@ This repository contains the **compiled browser version** and the tools needed t
 | `release-manifest.json` | File sizes and checksums used to check the download |
 | `tools/` | Scripts that prepare, verify and serve the game |
 | `dist/` | The ready-to-play folder created by the build command |
-| `netlify.toml` | Settings for deploying on Netlify |
 
 The prepared download is about **495 MiB**, including the game assets and cutscenes. Please let the first load finish.
 
@@ -111,7 +110,7 @@ The files in `site/Build/` are an exported game, not editable Unity scenes or sc
 
 If you have a copy of the **original Unity project**, here's how to open it:
 
-1. Install **Unity Hub** and **Unity Editor 6000.5.6f1**. Add the **Web Build Support** module if you want to export a browser build.
+1. Install **Unity Hub** and **Unity Editor 6000.5.6f1**.
 2. In Unity Hub, choose **Add project from disk**.
 3. Select the project folder containing `Assets`, `Packages` and `ProjectSettings`.
 4. Open it with the matching Unity version and let Unity finish importing the assets.
@@ -121,24 +120,15 @@ If you have a copy of the **original Unity project**, here's how to open it:
 
 Those paths belong to the original project. They are not folders included in this public repository.
 
-## Put the game on the web
+## Please respect the project
 
-### itch.io
+I shared this repository so you can play the game locally, learn from it and use what you learn to create something different of your own.
 
-1. Run `npm run build`.
-2. ZIP the **contents** of `dist/`, with `index.html` directly at the ZIP's root.
-3. Create or edit your itch.io project and choose **HTML** as the kind of project.
-4. Upload the ZIP and check **This file will be played in the browser**.
-5. Enable fullscreen support and test the uploaded game before publishing it.
+**You may not reupload or publish this game online, rename it and claim it as your own, or earn money from it.** That includes selling it, charging for access, adding ads or collecting donations through a reuploaded copy.
 
-### Netlify
+Please build your own game rather than putting Before It Melts on a website with your name on it. Making this repository public does not give permission to rebrand, republish or monetise this game.
 
-1. Connect this GitHub repository to Netlify.
-2. Use `main` as the branch.
-3. Set the build command to `npm run build` and the publish directory to `dist`. The included `netlify.toml` already supplies these settings.
-4. Deploy, then open the game using the HTTPS link Netlify gives you.
-
-Neither service needs Unity installed to host this compiled release.
+**Before It Melts was created by Arush, under The Skull Bear Studios.**
 
 ## Having trouble?
 
